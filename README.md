@@ -1,0 +1,2 @@
+# GooseModAndOpenAsarDownloader
+Yes -TEMP-
