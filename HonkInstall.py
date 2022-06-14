@@ -22,7 +22,13 @@ def reporter(blocknum, blocksize, totalsize):
 
 #UrlRetriever
 def powpow(name, repname, replink):
+    print("Installing + name + "...")
     urlretrieve(replink, repname, reporter)
+    startfile(repname)
+    sleep(3)
+    rm(repname)
+    print(name + " Installed!")
+    exit(sleep(3))
 
 #Check Is Internet Connection
 def is_connected():
@@ -66,58 +72,23 @@ if is_connected() == 'Yes':
         exit(sleep(3))
     
     if gosever == '1':
-        print("Installing OpenAsar For Discord PTB...")
         powpow('OpenAsar Discord Stable', 'OADP.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/openasar/openasarptb.bat')
-        startfile('OADP.bat')
-        sleep(3)
-        rm('OADP.bat')
-        print("OpenAsar For Discord Stable Installed!")
-        exit(sleep(3))
-    
+
     if gosever == '1':
-        print("Installing OpenAsar For Discord Canary...")
         powpow('OpenAsar Discord Canary', 'OADC.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/openasar/openasarcanary.bat')
-        startfile('OADB.bat')
-        rm('OADC.bat')
-        print("OpenAsar For Discord Canary Installed!")
-        exit(sleep(3))
-    
+
     if gosever == '4':
-        print("Installing GooseMod for Discord Stable...")
         powpow('GooseMod Discord Stable', 'GMDS.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/goosemod/goosemodstable.bat')
-        startfile('GMDS.bat')
-        sleep(3)
-        rm('GMDS.bat')
-        print("GooseMod For Discord Stable Installed!")
-        exit(sleep(3))
-        
+
     if gosever == '5':
-        print("Installing GooseMod for Discord PTB...")
         powpow('GooseMod Discord PTB', 'GMDP.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/goosemod/goosemodptb.bat')
-        startfile('GMDP.bat')
-        sleep(3)
-        rm('GMDP.bat')
-        print("GooseMod For Discord PTB Installed!")
-        exit(sleep(3))
-        
+
     if gosever == '6':
-        print("Installing GooseMod for Discord Canary...")
         powpow('GooseMod Discord Canary', 'GMDC.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/goosemod/goosemodcanary.bat')
-        startfile('GMDC.bat')
-        sleep(3)
-        rm('GMDC.bat')
-        print("GooseMod For Discord Canary Installed!")
-        exit(sleep(3))
-        
+
     if gosever == '7':
-        print("Installing GooseMod for Discord Development...")
         powpow('GooseMod Discord Development', 'GMDD.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/goosemod/goosemoddev.bat')
-        startfile('GMDD.bat')
-        sleep(3)
-        rm('GMDD.bat')
-        print("GooseMod For Discord Development Installed!")
-        exit(sleep(3))
-        
+
     if gosever == '8':
         webopen('https://chrome.google.com/webstore/detail/goosemod-for-web/clgkdcccmbjmjdbdgcigpocfkkjeaeld')
         print("GooseMod For Discord Web URL Opened!")
