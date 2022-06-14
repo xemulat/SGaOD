@@ -63,18 +63,12 @@ if is_connected() == 'Yes':
     print(" ")
     
     if gosever == '1':
-        print("Installing OpenAsar For Discord Stable...")
         powpow('OpenAsar Discord Stable', 'OADS.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/openasar/openasarstable.bat')
-        startfile('OADS.bat')
-        sleep(3)
-        rm('OADS.bat')
-        print("OpenAsar For Discord Stable Installed!")
-        exit(sleep(3))
-    
-    if gosever == '1':
+
+    if gosever == '2':
         powpow('OpenAsar Discord Stable', 'OADP.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/openasar/openasarptb.bat')
 
-    if gosever == '1':
+    if gosever == '3':
         powpow('OpenAsar Discord Canary', 'OADC.bat', 'https://github.com/xemulat/MyFilesForDDL/releases/download/openasar/openasarcanary.bat')
 
     if gosever == '4':
