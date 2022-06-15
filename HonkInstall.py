@@ -3,7 +3,7 @@ import sys
 from time import sleep
 from webbrowser import open as webopen
 from os import system, startfile, remove as rm
-import socket
+from socket import gethostbyname, create_connection
 from colorama import Fore, init
 init(autoreset=True)
 
@@ -22,7 +22,7 @@ def reporter(blocknum, blocksize, totalsize):
 
 #UrlRetriever
 def powpow(name, repname, replink):
-    print("Installing + name + "...")
+    print("Installing " + name + "...")
     urlretrieve(replink, repname, reporter)
     startfile(repname)
     sleep(3)
@@ -33,8 +33,8 @@ def powpow(name, repname, replink):
 #Check Is Internet Connection
 def is_connected():
   try:
-    host = socket.gethostbyname("github.com")
-    s = socket.create_connection((host, 80), 2)
+    host = gethostbyname("github.com")
+    s = create_connection((host, 80), 2)
     return 'Yes'
   except:
      pass
